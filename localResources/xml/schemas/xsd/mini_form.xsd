@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- ROOT ELEMENT -->
+    <xs:element name="mini-form">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="field" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="title" type="xs:string" use="required" />
+            <xs:attribute name="label-width" type="xs:int" default="120" />
+            <xs:attribute name="buttons" type="xs:boolean" default="true" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- BASE ELEMENTS -->
+    <xs:element name="field">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="label" type="xs:string" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

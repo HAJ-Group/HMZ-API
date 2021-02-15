@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mini-form title="MY FORM" buttons="false">
+    <field label="id">Your ID ?</field>
+    <field label="name">Your Name</field>
+    <field label="age" />
+</mini-form>

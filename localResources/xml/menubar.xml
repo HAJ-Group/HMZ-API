@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menubar>
+    <menu title="File">
+        <item label="New" icon="New.png" action="pop">New Document</item>
+        <item label="Open" icon="Open.png" action="pop">Open Document</item>
+        <item label="Save" icon="Save.png" action="pop">Save Document</item>
+        <s/>
+        <item label="Exit" icon="Exit.png" action="exit"/>
+    </menu>
+    <menu title="Edit">
+        <item label="shit"/>
+    </menu>
+    
+</menubar>

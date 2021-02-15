@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- ROOT ELEMENT -->
+    <xs:element name="form">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="text" />
+                <xs:element ref="choice" />
+                <xs:element ref="select" />
+                <xs:element ref="button" />
+                <xs:element ref="s" />
+                <xs:element name="label" type="xs:string" />
+            </xs:choice>
+            <xs:attributeGroup ref="init" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- BASE ELEMENTS -->
+    <xs:element name="text">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="rows" type="xs:int" default="1" />
+                    <xs:attribute name="label" type="xs:string" use="required" />
+                    <xs:attribute name="size" type="xs:int" default="15" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="choice" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="option" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="multiple" type="xs:boolean" default="false" />
+            <xs:attribute name="label" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="select" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="option" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="label" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="button">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="action" type="actionType"  />
+                    <xs:attribute name="hover" type="xs:boolean" default="true" />
+                    <xs:attribute name="disabled" type="xs:boolean" default="false" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="s">
+        <xs:complexType />
+    </xs:element>
+    
+    <!-- COMPONENT ELEMENTS -->
+    <xs:element name="option">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="checked" type="xs:boolean" default="false" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- ATTRIBUTES -->
+    
+    <xs:attributeGroup name="init">
+        <xs:attribute name="title" type="xs:string" />
+        <xs:attribute name="label-width" type="xs:int" default="100" />
+    </xs:attributeGroup>
+    
+    <!-- TYPES -->
+    <xs:simpleType name="actionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="exit" />
+            <xs:enumeration value="pop" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>

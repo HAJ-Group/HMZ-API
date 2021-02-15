@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documents>
+	<document id="10">
+		<title>Ingénieurie de L'objet en java</title>
+		<price>650</price>
+		<authors>
+			<author id="100">
+				<name>James Gouling</name>
+				<year-born>1955</year-born>
+				<country>Canada</country>
+			</author>
+		</authors>
+	</document>
+	
+	<document id="20">
+		<title>Automatisation des testes unitaires avec j-unit</title>
+		<price>750</price>
+		<authors>
+			<author id="101">
+				<name>Eric Gama</name>
+				<year-born>1961</year-born>
+				<country>Suisse</country>
+			</author>
+			<author id="100">
+				<name>James Gouling</name>
+				<year-born>1955</year-born>
+				<country>Canada</country>
+			</author>
+		</authors>
+	</document>
+	
+	<document id="30">
+		<title>Ingénieurie du Web Avec JavaScript</title>
+		<price>756</price>
+		<authors>
+			<author id="102">
+				<name>Brenden Eich</name>
+				<year-born>1961</year-born>
+				<country>USA</country>
+			</author>
+		</authors>
+	</document>
+	
+</documents>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- ROOT ELEMENT -->
+    <xs:element name="table">
+        <xs:complexType>
+            <xs:group ref="tableComponents" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- BASE ELEMENTS -->
+    <xs:group name="tableComponents">
+        <xs:sequence>
+            <xs:element name="header" type="rowType" />
+            <xs:element name="row" type="rowType" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:group>
+    
+    <!-- TYPES -->
+    <xs:complexType name="rowType">
+        <xs:sequence>
+            <xs:element name="column" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>

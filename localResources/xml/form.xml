@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form title="New Form" label-width="200">
+
+    <label>Personal Infos 1</label>
+    <s/>
+    <text label="Enter Your Id"  />
+    <text label="Enter Your Name">Hamza Alaoui For Example</text>
+    <text label="Enter Your Age" />
+    <choice label="Choose Your Gender">
+        <option checked="true">Male</option>
+        <option>Female</option>
+    </choice>
+    <s/>
+    <label>Personal Infos 2</label>
+    <s/>
+    <text label="Describe Your Self" size="30" rows="3" >I am ....</text>
+    <choice label="Check Your Interests" multiple="true">
+        <option checked="true">Sport</option>
+        <option>Reading</option>
+        <option>Travelling</option>
+        <option checked="true">Hanging out</option>
+        <option>Studying</option>
+        <option checked="true">Watching Movies/TV Shows</option>
+        <option>Gaming</option>
+    </choice>
+    <select label="What Languages You Speak">
+        <option checked="true">English</option>
+        <option>German</option>
+        <option checked="true">French</option>
+        <option>Spannish</option>
+        <option >Arabic</option>
+    </select>
+    <s/>
+    <label>Validating</label>
+    <s/>
+    <button action="pop">Yayha hhh</button>
+    <button action="pop" disabled="true">Validate</button>
+    <button action="exit" hover="false">Exit</button>
+    
+</form>

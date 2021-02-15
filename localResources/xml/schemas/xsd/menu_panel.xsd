@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- ROOT -->
+    <xs:element name="menu-panel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="title" type="xs:string" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- BASE ELEMENTS -->
+    <xs:element name="title">
+        <xs:complexType>
+            <xs:attribute name="value" type="xs:string" use="required" />
+            <xs:attribute name="action" fixed="pop" />
+        </xs:complexType>
+    </xs:element>
+   
+</xs:schema>

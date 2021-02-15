@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu-panel title="MY MENU">
+    <title value="OPEN" action="pop"/>
+    <title value="HI" action="pop"/>
+</menu-panel>
